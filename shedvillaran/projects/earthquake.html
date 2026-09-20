@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Power BI Dashboard</title>
+
+    <!-- Link to your existing main CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        /* Additional project‐page specific styles */
+
+        body {
+            background: var(--eerie-black-2);
+            /* match your article / content area style */
+            color: var(--white-2);
+            padding: 40px 20px;
+        }
+
+        .project-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--eerie-black-2);
+            border: 1px solid var(--jet);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow-1);
+        }
+
+        .project-title {
+            font-size: var(--fs-2);
+            color: var(--white-2);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .project-image {
+            width: 100%;
+            border-radius: 14px;
+            object-fit: cover;
+            margin-bottom: 30px;
+        }
+
+        .project-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .project-links .btn-github,
+        .project-links .btn-doc {
+            background: var(--border-gradient-onyx);
+            color: var(--orange-yellow-crayola);
+            padding: 12px 24px;
+            border-radius: 14px;
+            font-size: var(--fs-6);
+            text-transform: none;
+            font-weight: var(--fw-500);
+            width: fit-content;
+            transition: var(--transition-1);
+        }
+
+        .project-links .btn-github::before,
+        .project-links .btn-doc::before {
+            content: "";
+            position: absolute;
+            inset: 1px;
+            background: var(--bg-gradient-jet);
+            border-radius: inherit;
+            z-index: -1;
+            transition: var(--transition-1);
+        }
+
+        .project-links a:hover {
+            background: var(--bg-gradient-yellow-1);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--light-gray);
+            font-size: var(--fs-7);
+            text-decoration: none;
+            transition: var(--transition-1);
+        }
+
+        .back-btn:hover {
+            color: var(--white-2);
+        }
+
+        @media (max-width: 600px) {
+            .project-wrapper {
+                padding: 20px;
+            }
+
+            .project-links .btn-github,
+            .project-links .btn-doc {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            margin-bottom: 30px;
+            transition: var(--transition-1);
+        }
+
+        .back-icon {
+            width: 78px;
+            height: 78px;
+            filter: brightness(0.8);
+            transition: var(--transition-1);
+        }
+
+        .back-btn:hover .back-icon {
+            filter: brightness(1.2);
+            transform: translateX(-3px);
+            /* subtle left motion on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <a class="back-btn" onclick="window.history.back()">
+        <img src="../assets/images/back.png" alt="Back" class="back-icon">
+    </a>
+
+
+    <div class="project-wrapper">
+        <h1 class="project-title">Power BI Earthquake Dashboard</h1>
+
+        <img src="images/earthquake-dashboard.jpg" alt="Earthquake Dashboard Preview" class="project-image" />
+
+        <div class="project-links">
+            <a href="https://github.com/yourusername/earthquake-dashboard" class="btn-github" target="_blank"
+                title="View interactive dashboard & code on GitHub">
+                View Dashboard & Code (GitHub)
+            </a>
+            <a href="docs/earthquake-documentation.pdf" class="btn-doc" target="_blank"
+                title="Open full documentation PDF">
+                View Documentation (PDF)
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
